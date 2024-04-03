@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 100%;
+        display: flex;
+        margin-top: 300px;
+        justify-content: center;
+      }
+
+      .artirma {
+        background-color: green;
+        padding: 20px;
+        margin: 20px;
+      }
+      .azaltma {
+        background-color: red;
+        padding: 20px;
+        margin: 20px;
+      }
+      .text {
+        padding: 20px;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="artir">
+        <button class="artirma" onclick="artirma()">+</button>
+      </div>
+      <div class="text"></div>
+      <div class="azalt">
+        <button class="azaltma" onclick="azaltma()">-</button>
+      </div>
+    </div>
+
+    <script>
+      var text = document.querySelector(".text");
+      var sayi = 0;
+      text.innerHTML = sayi;
+      function artirma() {
+        sayi++;
+        dongu();
+      }
+
+      function azaltma() {
+        sayi--;
+        text.innerHTML = sayi;
+        dongu();
+        // if (text.innerHTML < 0) {
+        //   text.style.backgroundColor = "yellow";
+        // } else if (text.innerHTML == 0) {
+        //   text.style.backgroundColor = "white";
+        // }
+      }
+      function dongu() {
+        text.innerHTML = sayi;
+        if (text.innerHTML > 0) {
+          text.style.backgroundColor = "blue";
+        } else if (text.innerHTML == 0) {
+          text.style.backgroundColor = "white";
+        } else {
+          text.style.backgroundColor = "yellow";
+        }
+      }
+    </script>
+  </body>
+</html>

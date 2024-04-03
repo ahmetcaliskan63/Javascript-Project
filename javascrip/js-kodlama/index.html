@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satır Ekle/Sil</title>
+  </head>
+  <body>
+    <table id="myTable" border="2">
+      <tr>
+        <td>Satır1 Sütun1</td>
+        <td>Satır1 Sütun2</td>
+      </tr>
+      <tr>
+        <td>Satır2 Sütun1</td>
+        <td>Satır2 Sütun2</td>
+      </tr>
+      <tr>
+        <td>Satır3 Sütun1</td>
+        <td>Satır3 Sütun2</td>
+      </tr>
+      <tr style="background-color: rgba(255, 0, 0, 0.519)">
+        <td>Satır4 Sütun1</td>
+        <td>Satır4 Sütun2</td>
+      </tr>
+      <tr style="background-color: rgba(101, 147, 221, 0.972)">
+        <td>Satır5 Sütun1</td>
+        <td>Satır5 Sütun2</td>
+      </tr>
+      <tr style="background-color: rgb(34, 135, 66)">
+        <td>Satır6 Sütun1</td>
+        <td>Satır6 Sütun2</td>
+      </tr>
+    </table>
+    <button onclick="ekleSatir()" class="ekle">Satır Ekle</button>
+    <button onclick="silSonSatir()" class="sil">Satır Sil</button>
+
+    <script>
+      var siradakiSayi = 7;
+
+      function ekleSatir() {
+        var table = document.getElementById("myTable");
+        var row = table.insertRow(-1);
+
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+
+        var randomColor = getRandomColor();
+        row.style.backgroundColor = randomColor;
+
+        cell1.innerHTML = "Satır" + siradakiSayi + " Sütun1";
+        cell2.innerHTML = "Satır" + siradakiSayi + " Sütun2";
+
+        siradakiSayi++;
+      }
+
+      function silSonSatir() {
+        var table = document.getElementById("myTable");
+        var rowCount = table.getElementsByTagName("tr").length;
+
+        if (rowCount > 1) {
+          table.deleteRow(rowCount - 1);
+          siradakiSayi--;
+        }
+      }
+
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+    </script>
+  </body>
+</html>

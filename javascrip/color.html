@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav style="display: flex; justify-content: space-between">
+      <div>
+        <h1><a href="#" style="text-decoration: none">Color flipper</a></h1>
+      </div>
+      <div>
+        <ul style="display: flex; padding-top: 5px">
+          <li
+            style="
+              padding-right: 5px;
+              list-style-type: none;
+              text-decoration: none;
+            "
+          >
+            <a style="text-decoration: none" href="#">Simple</a>
+          </li>
+          <li style="list-style-type: none; text-decoration: none">
+            <a style="text-decoration: none" href="#">Hex</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        color: #fff;
+      "
+    >
+      <h1>Background Color: <span id="color">o</span></h1>
+    </div>
+    <div style="display: flex; justify-content: center; margin-top: 30px">
+      <button
+        type="submit"
+        id="btn"
+        style="padding: 15px; border-radius: 10px; border: 3px solid black"
+      >
+        CLIK ME
+      </button>
+    </div>
+
+    <script src="color.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      td {
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="myTable">
+      <tr>
+        <td>Satır 1 Sütun 1</td>
+        <td>Satır 1 Sütun 2</td>
+      </tr>
+      <tr>
+        <td>Satır 2 Sütun 1</td>
+        <td>Satır 2 Sütun 2</td>
+      </tr>
+      <tr>
+        <td>Satır 3 Sütun 1</td>
+        <td>Satır 3 Sütun 2</td>
+      </tr>
+    </table>
+    <button id="btn" onclick="Ekle()">Satır Ekle</button>
+    <button id="btn1" onclick="Azalt()">Satır Sil</button>
+    <script>
+      function Ekle() {
+        var tablo = document.getElementById("myTable");
+        var tr = document.createElement("tr");
+        var birtd = document.createElement("td");
+        birtd.style.backgroundColor = "green";
+        var ikitd = document.createElement("td");
+        ikitd.style.backgroundColor = "green";
+        var sayi = document.getElementsByTagName("tr").length + 1;
+        birtd.innerHTML = "Satır " + sayi + " Sütun 1";
+        ikitd.innerHTML = "Satır " + sayi + " Sütun 2";
+        tr.appendChild(birtd);
+        tr.appendChild(ikitd);
+        tablo.appendChild(tr);
+      }
+
+      function Azalt() {
+        var tablo = document.getElementById("myTable");
+        var son = tablo.lastChild;
+        tablo.removeChild(son);
+      }
+    </script>
+  </body>
+</html>

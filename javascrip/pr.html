@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="pr.css" />
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+      </head>
+      <body>
+        <form border="1">
+          <div>
+            <table>
+              <tr>
+                <td><label for="ad">Ad-Soyad</label></td>
+                <td><input id="ad" type="text" /></td>
+              </tr>
+            </table>
+          </div>
+
+          <div>
+            <table>
+              <tr>
+                <td><label for="e-mail">email</label></td>
+                <td><input id="e-mail" type="email" /></td>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <table>
+              <tr>
+                <td><label for="sifre1">şifre1</label></td>
+                <td><input id="sifre1" type="password" /></td>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <table>
+              <tr>
+                <td><label for="sifre2">şifre2</label></td>
+                <td><input id="sifre2" type="password" /></td>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <table>
+              <tr>
+                <td><label for="sehir">Sehirler</label></td>
+                <td>
+                  <select name="" id="">
+                    <option value="">şanlıurfa</option>
+                    <option value="">izmir</option>
+                    <option value="">adana</option>
+                    <option value="">muş</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <table>
+              <tr>
+                <td><label for="">Button</label></td>
+                <td><button onclick="kontrol()">Kayıt ol</button></td>
+              </tr>
+            </table>
+          </div>
+        </form>
+
+        <script>
+          function kontrol() {
+            var sifre1 = document.getElementById("sifre1").value;
+            var sifre2 = document.getElementById("sifre2").value;
+
+            if (sifre1.length < 5) {
+              alert("Şifrenizi 5`ten küçük girdiniz");
+            } else {
+              if (sifre1 == sifre2) {
+                alert("başarılı giriş");
+              } else {
+                alert("barısız giriş");
+              }
+            }
+          }
+        </script>
+      </body>
+    </html>
+  </body>
+</html>

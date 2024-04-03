@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <form class="form-control">
+              <table>
+                <tr>
+                  <td><label for="">Ad-Soyad:</label></td>
+                  <td><input type="text" id="name" /></td>
+                </tr>
+                <tr>
+                  <td><label for="">Email:</label></td>
+                  <td><input type="email" id="email" /></td>
+                </tr>
+                <tr>
+                  <td><label for="">Şifre1:</label></td>
+                  <td><input type="password" id="sifre1" /></td>
+                </tr>
+                <tr>
+                  <td><label for="">Şifre2:</label></td>
+                  <td><input type="password" id="sifre2" /></td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="btn btn-primary mt-3" onclick="kontrol()">
+                      Kayıt Ol
+                    </button>
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function kontrol() {
+        var sifre1 = document.getElementById("sifre1");
+        var sifre2 = document.getElementById("sifre2");
+        if (sifre1.value.length < 5) {
+          alert("şigrenizi 6 haneden küçük girdiniz");
+        } else {
+          if (sifre1.value == sifre2.value) {
+            alert("giriş Başarılıdır");
+          } else {
+            alert("giriş başarısız");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

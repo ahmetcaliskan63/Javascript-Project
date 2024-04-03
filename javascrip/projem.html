@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="text-5xl my-10 text-center">Todo List</h1>
+
+    <div class="container mx-auto w-1/2">
+      <form action="">
+        <div class="border flex">
+          <input
+            type="text"
+            class="w-full p-3"
+            placeholder="Bir şeyler yazınız..."
+          />
+          <button
+            type="submit"
+            id="todos"
+            class="border-l px-6 bg-green-500 text-white"
+          >
+            Ekle
+          </button>
+        </div>
+      </form>
+      <div class="flex justify-end my-5">
+        <button type="submit" class="p-3 bg-red-500 text-white">Temizle</button>
+      </div>
+
+      <ul class="border p-6 flex-col gap-y-4">
+        <li
+          class="flex justify-between border px-4 py-3 flex items-center justify-between"
+        >
+          <samp>Todo Name</samp>
+          <button class="text-red-400">Sil</button>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      let textInputDOM = document.getElementById("todos");
+
+      textInputDOM.addEventListener("change", function (event) {
+        console.log(event.target.value);
+      });
+    </script>
+  </body>
+</html>
